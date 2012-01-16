@@ -41,6 +41,7 @@
 #define BUTTON_PIN 2  // Pushbutton
 #define LCD_PIN 4     // Serial LCD RX line
 #define POT_PIN A0    // Potentiometer wiper
+#define CHANNEL 1     // MIDI Channel
 
 SparkSoftLCD lcd = SparkSoftLCD(LCD_PIN); // Serial LCD
 bool btnPressed;      // is button depressed?
@@ -59,7 +60,7 @@ void setup() {
   lcd.print("Waiting...");
 
   // MIDI Setup
-  MIDI.begin(1);
+  MIDI.begin(CHANNEL);
 
   // Other I/O Setup
   pinMode(BUTTON_PIN, INPUT);
@@ -102,7 +103,7 @@ void loop() {
     lcd.print(note);
     // Play the MIDI note.  Consider expanding this by adding another
     // potentiometer for attack / release velocity.
-    MIDI.sendNoteOn(note, 64, 1);
+    MIDI.sendNoteOn(note, 64, CHANNEL);
     notePlayed = true;
   }
 
@@ -117,7 +118,7 @@ void loop() {
     lcd.print("Note Off: ");
     lcd.print(note);
     // Send the Note Off message to stop playing the note. 
-    MIDI.sendNoteOff(note, 0, 1);
+    MIDI.sendNoteOff(note, 0, CHANNEL);
     notePlayed = false;
   }
 }

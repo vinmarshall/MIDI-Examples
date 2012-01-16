@@ -38,6 +38,7 @@
 #include <MIDI.h> // download from http://sourceforge.net/projects/arduinomidilib
 
 #define LCD_PIN 4     // Serial LCD RX line
+#define CHANNEL 1     // MIDI Channel
 
 SparkSoftLCD lcd = SparkSoftLCD(LCD_PIN);
 
@@ -50,11 +51,11 @@ void setup() {
   lcd.print("Waiting...");
 
   // MIDI Setup
-  MIDI.begin(1);
+  MIDI.begin(CHANNEL);
 }
 
 void loop() {
-  if (MIDI.read()) {
+  if (MIDI.read(CHANNEL)) {   // Channel arg is optional
     switch(MIDI.getType()) {
       case NoteOn:
         {
@@ -83,6 +84,11 @@ void loop() {
           break;
         }
     }
+
+    // We need this so that the MIDI OUT will parrot the data on MIDI IN
+    // without errors.  See the comment about this in the Control Change
+    // demo code.
+    MIDI.send(InvalidType, 0, 0, 0);
   }
 
 }

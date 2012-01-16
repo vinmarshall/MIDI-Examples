@@ -47,6 +47,7 @@
 #define THRESHOLD 5   // Hysterisis threshold
 #define CONTROLLER 11 // Choose a Controller ID - 
                       // http://www.somascape.org/midi/tech/spec.html#ctrlnums
+#define CHANNEL 1     // MIDI Channel
 
 SparkSoftLCD lcd = SparkSoftLCD(LCD_PIN); // Serial LCD
 unsigned long intervalTimer;  // mark interval time
@@ -63,7 +64,7 @@ void setup() {
   lcd.print("Waiting...");
 
   // MIDI Setup
-  MIDI.begin(1);
+  MIDI.begin(CHANNEL);
 
   // Other I/O Setup
   pinMode(BUTTON_PIN, INPUT);
@@ -93,9 +94,9 @@ void loop() {
       lcd.print(value);
 
       // Send the MIDI Control Change Message
-      MIDI.sendControlChange(CONTROLLER, value, 1);
+      MIDI.sendControlChange(CONTROLLER, value, CHANNEL);
 
-      // OR - Send the MIDI pitch bend message on channel 1
+      // OR - Send the MIDI pitch bend message
       // define value above as: unsigned int value
       // value = pot * 16;  // Map to pitch bend value 0-16383
       // MIDI.sendPitchBend(pitch, 1);
