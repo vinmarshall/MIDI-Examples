@@ -1,0 +1,42 @@
+MIDI related Wikipedia articles - a good starting point:
+http://en.wikipedia.org/wiki/MIDI
+http://en.wikipedia.org/wiki/General_MIDI
+http://en.wikipedia.org/wiki/MIDI_1.0
+
+Summary of MIDI Messages:
+http://www.midi.org/techspecs/midimessages.phphttp://www.midi.org/techspecs/midimessages.php
+
+MIDI Tech Specs and Info:
+http://www.midi.org/techspecs/index.php
+
+MIDI Tutorials:
+http://www.midi.org/aboutmidi/tutorials.php
+
+MIDI Specifications:
+http://www.somascape.org/midi/tech/spec.html
+
+Real Time System Exclusive Extensions -
+
+MIDI Machine Control (MMC):
+http://en.wikipedia.org/wiki/MIDI_Machine_Control
+
+MIDI Show Control (MSC):
+http://en.wikipedia.org/wiki/MIDI_Show_Control
+http://www.richmondsounddesign.com/docs/midi-show-control-specification.pdf
+
+MIDI Monitor Software for OS X:
+http://www.snoize.com/MIDIMonitor/
+
+MIDI Monitor Software for Windows: 
+http://www.hitsquad.com/smm/programs/MIDIMonitor/
+
+Arduino MIDI Library Reference Documentation:
+http://arduinomidilib.sourceforge.net/a00001.html
+
+Arduino MIDI Projects Collection:
+http://www.arduino.cc/playground/Main/InterfacingWithHardware#MIDI
+
+Arduino MIDI Tutorial (playing notes):
+http://arduino.cc/en/Tutorial/Midi
+
+
