@@ -1,0 +1,57 @@
+These are some code examples to support the MIDI Basics column in the TK 
+2012 issue of Popular Science.  They're simple, but they should be enough
+to get you going with MIDI and an Arduino.
+
+If you make some well commented examples of your own that you'd like to 
+include here, please fork the repository and issue a pull request.  If 
+possible, please use the same circuit or one based upon the demo circuit
+used here so that these examples can all run on the same hardware.
+
+That hardware is defined in ./hardware
+
+References for further reading are listed in ./further_reading.txt 
+
+You can build an interface circuit based on this schematic:
+http://www.midi.org/techspecs/electrispec.php
+
+If you are building the MIDI IN side with a 6N138 Optoisolator instead
+of the PC-900, replace the MIDI IN part of the above with this:
+https://github.com/vinmarshall/Radio-Shack-MIDI-Lights/blob/master/schematic/1_MIDI.bmp
+
+Or just pick up a MIDI Breakout Board or MIDI Shield from Sparkfun, both
+of which will stack directly on your Arduino:
+http://www.sparkfun.com/products/9595
+http://www.sparkfun.com/products/9598
+
+The Examples: 
+
+Chordinator:
+
+ * This code will read Note On and Note Off messages on Channel 1
+ * arriving at the MIDI IN port and play a Chord built on each of 
+ * those notes to the MIDI OUT port.  Connect the MIDI OUT of your
+ * keyboard to the MIDI IN of the Arduino and the MIDI OUT of the
+ * Arduino to the MIDI IN of the keyboard.  
+
+
+Control Change:
+
+ * This code will send Control Change (or PitchBend, or 
+ * Aftertouch, etc...) messages based on the position of the 
+ * potentiometer every time it's position changes.  This is just 
+ * a simple demo designed to get you up and running with MIDI. 
+
+
+Play Notes:
+
+ * This code will send Note On and Note Off messages on Channel 1
+ * based on the position of the potentiometer when the button is
+ * pressed.  This is just a simple demo designed to get you up and 
+ * running with MIDI.
+
+
+Read Notes:
+
+ * This code will read Note On and Note Off messages on Channel 1
+ * arriving at the MIDI IN port.  This is just a simple demo designed 
+ * to get you up and running with MIDI.
