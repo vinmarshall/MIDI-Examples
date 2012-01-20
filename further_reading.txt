@@ -4,7 +4,7 @@ http://en.wikipedia.org/wiki/General_MIDI
 http://en.wikipedia.org/wiki/MIDI_1.0
 
 Summary of MIDI Messages:
-http://www.midi.org/techspecs/midimessages.phphttp://www.midi.org/techspecs/midimessages.php
+http://www.midi.org/techspecs/midimessages.php
 
 MIDI Tech Specs and Info:
 http://www.midi.org/techspecs/index.php
