@@ -7,21 +7,28 @@ include here, please fork the repository and issue a pull request.  If
 possible, please use the same circuit or one based upon the demo circuit
 used here so that these examples can all run on the same hardware.
 
-That hardware is defined in ./hardware
+These examples are written assuming you are using the Sparkfun MIDI Shield
+or an equivalent circuit with the same pin connections (e.g. momentary
+pushbutton connected to digital pin 2).  Build that shield with stackable
+Arduino headers and connect a Serial LCD to +5V, GND, and D5 on the shield.
 
-References for further reading are listed in ./further_reading.txt 
+Shield - http://www.sparkfun.com/products/9595
+Headers - http://www.sparkfun.com/products/10007
+Serial LCD - http://www.sparkfun.com/products/9395
 
-You can build an interface circuit based on this schematic:
+If you are building your own circuit, you can build a MIDI interface 
+circuit based on this schematic:
+
 http://www.midi.org/techspecs/electrispec.php
 
 If you are building the MIDI IN side with a 6N138 Optoisolator instead
 of the PC-900, replace the MIDI IN part of the above with this:
+
 https://github.com/vinmarshall/Radio-Shack-MIDI-Lights/blob/master/schematic/1_MIDI.bmp
 
-Or just pick up a MIDI Breakout Board or MIDI Shield from Sparkfun, both
-of which will stack directly on your Arduino:
-http://www.sparkfun.com/products/9595
+The Sparkfun MIDI Breakout Board is also good for prototyping:
 http://www.sparkfun.com/products/9598
+
 
 The Examples: 
 
@@ -55,3 +62,10 @@ Read Notes:
  * This code will read Note On and Note Off messages on Channel 1
  * arriving at the MIDI IN port.  This is just a simple demo designed 
  * to get you up and running with MIDI.
+
+
+Controlling Relays with MIDI:
+
+ Look at my "MIDI Lights" project for an example of using MIDI notes to
+ control a series of relays:
+ https://github.com/vinmarshall/Radio-Shack-MIDI-Lights
