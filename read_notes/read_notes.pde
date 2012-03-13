@@ -37,7 +37,7 @@
 #include <SparkSoftLCD.h>   // download from http://openmoco.org/node/153
 #include <MIDI.h> // download from http://sourceforge.net/projects/arduinomidilib
 
-#define LCD_PIN 4     // Serial LCD RX line
+#define LCD_PIN 5     // Serial LCD RX line
 #define CHANNEL 1     // MIDI Channel
 
 SparkSoftLCD lcd = SparkSoftLCD(LCD_PIN);
@@ -45,6 +45,7 @@ SparkSoftLCD lcd = SparkSoftLCD(LCD_PIN);
 void setup() {
   // Serial LCD Setup
   pinMode(LCD_PIN, OUTPUT);
+  delay(500);
   lcd.begin(9600);
   lcd.clear();
   lcd.cursor(0);  // hide cursor
