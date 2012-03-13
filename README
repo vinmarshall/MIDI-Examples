@@ -29,6 +29,9 @@ https://github.com/vinmarshall/Radio-Shack-MIDI-Lights/blob/master/schematic/1_M
 The Sparkfun MIDI Breakout Board is also good for prototyping:
 http://www.sparkfun.com/products/9598
 
+NOTE: Remember to set the Midi (Run) / Program switch to "Program" before trying
+to upload a program to the Arduino.  
+
 
 The Examples: 
 
