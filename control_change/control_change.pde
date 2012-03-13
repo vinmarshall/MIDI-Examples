@@ -39,9 +39,9 @@
 #include <SparkSoftLCD.h>   // download from http://openmoco.org/node/153
 #include <MIDI.h> // download from http://sourceforge.net/projects/arduinomidilib
 
-#define BUTTON_PIN 2  // Pushbutton
-#define LCD_PIN 4     // Serial LCD RX line
-#define POT_PIN A0    // Potentiometer wiper
+#define BUTTON_PIN 2  // Pushbutton (MIDI Shield button D2)
+#define LCD_PIN 5     // Serial LCD RX line
+#define POT_PIN A0    // Potentiometer wiper (MIDI Shield knob A0)
 
 #define INTERVAL 50   // Timer interval
 #define THRESHOLD 5   // Hysterisis threshold
@@ -58,6 +58,7 @@ int value;                    // Control value
 void setup() {
   // Serial LCD Setup
   pinMode(LCD_PIN, OUTPUT);
+  delay(500);
   lcd.begin(9600);
   lcd.clear();
   lcd.cursor(0);  // hide cursor
